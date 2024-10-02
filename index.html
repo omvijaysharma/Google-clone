@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Google Search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="backgroundVideoDiv">
+          <video id="backgroundVideo" autoplay loop muted>
+              <source src="background.mp4" id="videolink" type="video/mp4">
+    Your browser does not support the video tag.
+          </video>
+    </div>
+    
+    <div class="google">
+        <h1> Google </h1>
+        <form action="https://www.google.com/search" method="GET">
+            <input type="text" name="q" placeholder="Search Google..." required>
+        </form>
+        <div class="footer">
+            <p>Google Search Clone</p>
+        </div>
+    </div>
+</body>
+</html>
