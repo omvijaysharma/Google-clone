@@ -1,25 +1,24 @@
- /* Global styles */
+/* Global styles */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f2f2f2;
-    margin: 0;
-    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: #f2f2f2;
 }
-.google {
+.search-selector {
     text-align: center;
-    width: 100%;
-    margin-bottom: 100px;
+    width: 90%; /* Default width for smaller screens */
+    max-width: 600px;
 }
 h1 {
-    font-size: 48px;
+    font-size: 36px; /* Smaller heading for mobile */
     color: #fff;
     margin-bottom: 20px;
 }
@@ -27,6 +26,20 @@ form {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 10px; /* Space between elements */
+}
+select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #dcdcdc;
+    border-radius: 24px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #d7d7d7;
+    width: 100%; /* Full width on mobile */
+    max-width: 300px; /* Limited width for desktop */
+}
+select:focus {
+    border-color: #4285f4;
 }
 input[type="text"] {
     padding: 10px;
@@ -34,13 +47,25 @@ input[type="text"] {
     border: 1px solid #dcdcdc;
     border-radius: 24px;
     outline: none;
-    width: 80%;
-    max-width: 500px;
-    background: rgba(0,0,0,0.5);
+    width: 100%; /* Full width on mobile */
+    max-width: 300px; /* Limited width for desktop */
+    background: rgba(0, 0, 0, 0.5);
     color: #d7d7d7;
 }
-input[type="text"]:focus {
-    border-color: #4285f4;
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 24px;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    width: 100%; /* Full width on mobile */
+    max-width: 150px; /* Limited width for desktop */
+}
+button:hover {
+    background: #000;
 }
 .backgroundVideoDiv {
     position: fixed;
@@ -62,8 +87,37 @@ input[type="text"]:focus {
 .footer {
     position: fixed;
     bottom: 10px;
-    width: 90%;
-    left: 5%;
-    right: 5%;
+    width: 100%;
+    text-align: center;
     color: #fff;
+    font-size: 14px; /* Smaller footer text for mobile */
+}
+
+/* Responsive styles for tablets and larger screens */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 48px; /* Larger heading for tablets and desktops */
+    }
+    form {
+        gap: 15px; /* More space between elements */
+    }
+    select, input[type="text"], button {
+        width: auto; /* Inline elements for larger screens */
+    }
+    select, input[type="text"] {
+        max-width: 400px;
+    }
+    button {
+        max-width: 200px;
+    }
+}
+
+/* Responsive styles for desktops */
+@media (min-width: 1024px) {
+    .search-selector {
+        width: 100%; /* Wider layout for desktops */
+    }
+    footer {
+        font-size: 16px; /* Larger footer text for desktops */
+    }
 }
