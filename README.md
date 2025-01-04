@@ -3,7 +3,7 @@
 Welcome to the **Search Engine Selector Clone** project! This is a simple project that mimics the search functionality of popular search engines, including Google, Bing, Yahoo, and DuckDuckGo.
 
 ### 📲 **Try the Search Engine Selector Clone**  
-[![Try Search Engine Clone](https://img.shields.io/static/v1?label=Try+Search+Engine+Clone&message=Click+Here&color=green&style=for-the-badge)](https://omvijaysharma.github.io/Search-engine-selector-clone/)
+[![Try Search Engine Clone](https://img.shields.io/static/v1?label=Try+Search+Engine+Clone&message=Click+Here&color=green&style=for-the-badge)](https://omvijaysharma.github.io/Google-clone/)
 
 ---
 
