@@ -3,26 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Google Search</title>
+    <title>Search Engine Selector</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
     <div class="backgroundVideoDiv">
-          <video id="backgroundVideo" autoplay loop muted>
-              <source src="background.mp4" id="videolink" type="video/mp4">
-    Your browser does not support the video tag.
-          </video>
+        <video id="backgroundVideo" autoplay loop muted>
+            <source src="background.mp4" id="videolink" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
-    
-    <div class="google">
-        <h1> Google </h1>
-        <form action="https://www.google.com/search" method="GET">
-            <input type="text" name="q" placeholder="Search Google..." required>
+
+    <div class="search-selector">
+        <form id="searchForm" method="GET">
+            <div class="custom-select">
+                <select id="searchEngine" onchange="updateAction()">
+                    <option value="https://www.google.com/search">Google</option>
+                    <option value="https://www.bing.com/search">Bing</option>
+                    <option value="https://search.yahoo.com/search">Yahoo</option>
+                    <option value="https://duckduckgo.com/">DuckDuckGo</option>
+                </select>
+            </div>
+            <input type="text" name="q" id="searchQuery" placeholder="Enter your search..." required>
+            <button type="submit">Search</button>
         </form>
-        <div class="footer">
-            <p>Google Search Clone</p>
-        </div>
     </div>
+
+    <div class="footer">
+        <p>Multi Search Engine Selector</p>
+    </div>
+
+    <!-- Linking the external JavaScript file -->
+    <script src="script.js"></script>
 </body>
 </html>
